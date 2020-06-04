@@ -27,13 +27,19 @@ export default new Router({
   routes: [
     {
       path: '/login',
-      component: () => import(/* webpackChunkName: "login" */ '@/views/login/index.vue'),
-      meta: { hidden: true }
+      component: () => import('@/views/login/index.vue'),
+      meta: {
+        title: 'Capel Web',
+        hidden: true
+      }
     },
     {
       path: '/404',
-      component: () => import(/* webpackChunkName: "404" */ '@/views/404.vue'),
-      meta: { hidden: true }
+      component: () => import('@/views/404.vue'),
+      meta: {
+        title: 'Capel 404',
+        hidden: true
+      }
     },
     {
       path: '/',
@@ -42,7 +48,7 @@ export default new Router({
       children: [
         {
           path: 'dashboard',
-          component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/index.vue'),
+          component: () => import('@/views/dashboard/index.vue'),
           meta: {
             title: 'Dashboard',
             icon: 'dashboard'
@@ -61,7 +67,7 @@ export default new Router({
       children: [
         {
           path: 'tree',
-          component: () => import(/* webpackChunkName: "tree" */ '@/views/tree/index.vue'),
+          component: () => import('@/views/tree/index.vue'),
           meta: {
             title: 'Tree',
             icon: 'tree'
@@ -69,7 +75,7 @@ export default new Router({
         },
         {
           path: 'table',
-          component: () => import(/* webpackChunkName: "table" */ '@/views/table/index.vue'),
+          component: () => import('@/views/table/index.vue'),
           meta: {
             title: 'Table',
             icon: 'table'
@@ -83,7 +89,7 @@ export default new Router({
       children: [
         {
           path: 'index',
-          component: () => import(/* webpackChunkName: "form" */ '@/views/form/index.vue'),
+          component: () => import('@/views/form/index.vue'),
           meta: {
             title: 'Form',
             icon: 'form'
